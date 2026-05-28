@@ -1,29 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/site/Navbar";
+import Hero from "@/components/site/Hero";
+import Services from "@/components/site/Services";
+import Editorial from "@/components/site/Editorial";
+import Forms from "@/components/site/Forms";
+import Gallery from "@/components/site/Gallery";
+import Testimonials from "@/components/site/Testimonials";
+import Contact from "@/components/site/Contact";
+import Footer from "@/components/site/Footer";
+import FloatingCTA from "@/components/site/FloatingCTA";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Paisajismo Bascharant — Estudio de paisajismo contemporáneo en Chile" },
+      { name: "description", content: "Diseño, ejecución y mantención de proyectos paisajísticos premium para empresas, hogares y espacios comerciales en Chile." },
+      { property: "og:title", content: "Paisajismo Bascharant SpA" },
+      { property: "og:description", content: "Estudio boutique de paisajismo arquitectónico. Transformamos espacios en experiencias naturales." },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&family=Inter:wght@300;400;500;600&display=swap" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative bg-background text-foreground antialiased overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Services />
+      <Editorial />
+      <Forms />
+      <Gallery />
+      <Testimonials />
+      <Contact />
+      <Footer />
+      <FloatingCTA />
+      <Toaster position="bottom-left" />
+    </main>
   );
 }
