@@ -8,6 +8,7 @@ const links = [
   { href: "#particulares", label: "Particulares" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#contacto", label: "Contacto" },
+  
 ];
 
 export default function Navbar() {
@@ -105,3 +106,4 @@ export default function Navbar() {
     </motion.header>
   );
 }
+
