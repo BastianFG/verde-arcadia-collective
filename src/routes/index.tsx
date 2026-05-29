@@ -10,6 +10,7 @@ import Testimonials from "@/components/site/Testimonials";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 import FloatingCTA from "@/components/site/FloatingCTA";
+import { LogosEmpresas } from "@/components/site/LogosEmpresas";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,6 +34,7 @@ function Index() {
     <main className="relative bg-background text-foreground antialiased overflow-x-hidden">
       <Navbar />
       <Hero />
+      <LogosEmpresas />
       <Services />
       <Editorial />
       <Forms />
@@ -44,4 +46,6 @@ function Index() {
       <Toaster position="bottom-left" />
     </main>
   );
+}
+
 }
